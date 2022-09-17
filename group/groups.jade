@@ -1,0 +1,35 @@
+doctype html
+
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css', integrity='sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M', crossorigin='anonymous')
+    link(rel='stylesheet', href='groups.css')
+    title Group Chat App
+  body
+    header#main-header.text-white.p-4.mb-3
+      button#btn &#x2630;
+      nav#nav
+        ul
+          li
+            a(href='./groups') Home
+          .premium-feature
+          li
+            button#logout Logout
+      .container
+        .row
+          .col-md-6
+            h1#header-title Group Chat App
+    .container
+      #main.card.card-body
+        h2.title Create Group
+        form#addForm.form-inline.mb-3
+          input#group(type='text', placeholder='Group Name')
+          button.submit-btn(type='submit') Create Group
+        h2.title Groups
+        ul#items.list-group
+    script(src='https://checkout.razorpay.com/v1/checkout.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js')
+    script(src='groups.js', charset='utf-8')
